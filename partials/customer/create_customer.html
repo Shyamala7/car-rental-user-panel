@@ -1,0 +1,40 @@
+<section class="wrapper-lg bg-info">
+		<div class="container"><!-- 
+			<h1 class="text-center"><i class="fa fa-bullhorn"></i> </h1> -->
+			<hr>
+			<br class="spacer-lg">
+			<div class="row">
+				<div class="col-sm-3">
+				</div><!-- /.col -->
+				<div class="col-sm-6">
+					<h3>Add Customer</h3>
+					<form role="form" ng-submit="addCustomer(userForm.$valid)" name ="new_customer">
+						<div class="form-group">
+							<label for="customer_name">Customer Name<span class="text-danger"> *</span></label>
+							<input type="text" class="form-control input-lg" id="customer_name" placeholder="Customer Name" name="customer_name"  ng-model="addCustomer.customer_name" 
+							   ng-minlength="1" ng-maxlength="40">
+						</div>
+												<div class="form-group">
+							<label for="customer_email">Email<span class="text-danger"> *</span></label>
+							<input type="email" class="form-control input-lg" id="customer_email" placeholder="Email" name="customer_email"  ng-model="addCustomer.email" 
+							   ng-minlength="1" ng-maxlength="40" required>
+						</div> 
+						<div class="form-group">
+							<label for="customer_phone">Phone<span class="text-danger"> *</span></label>
+							<input type="text" class="form-control input-lg" id="customer_phone" placeholder="Customer Phone" name="customer_phone"  ng-model="addCustomer.phone" 
+							   ng-minlength="1" ng-maxlength="40">
+						</div>
+						<div class="form-group">
+							<label for="password">Password<span class="text-danger"> *</span></label>
+							<input type="password" class="form-control input-lg" id="password" placeholder="Password" name="password"  ng-model="addCustomer.password" 
+							   ng-minlength="1" ng-maxlength="40" required>
+						</div>
+						
+						<input type="hidden" id="customer_id" name="customer_id" ng-model="addCustomer.id"/>
+						<button type="submit" class="btn btn-lg btn-success">Save</button>
+					</form>
+					<br class="spacer-md">
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</section>

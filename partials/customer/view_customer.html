@@ -1,0 +1,33 @@
+<section class="wrapper-lg bg-info">
+		<div class="container"><!-- 
+			<h1 class="text-center"><i class="fa fa-bullhorn"></i> </h1> -->
+			<hr>
+			<br class="spacer-lg">
+			<div class="row">
+				<div class="col-sm-3">
+				</div><!-- /.col -->
+				<div class="col-sm-6">
+					<h3>Customer Master</h3><a href="#/add-customer">Add</a>
+					<table style="color:black;">
+						<tr>
+							<td>Name</td>
+							<td>Email</td>
+							<td>Phone</td>
+							<td>Password</td>							
+							<td>Edit</td>
+							<td>Delete</td>
+						</tr>
+						<tr ng-repeat = "customer in customers">
+							<td>{{customer.name}}</td>
+							<td>{{customer.email}}</td>
+							<td>{{customer.phone}}</td>
+							<td>{{customer.password}}</td>							
+							<td><a href="#/edit-customer/{{customer.id}}">Edit</a></td>
+							<td><a ng-click="deleteCustomer(customer.id)">Delete</a></td>
+						</tr>
+					</table>
+					<br class="spacer-md">
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</section>

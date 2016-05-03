@@ -1,0 +1,55 @@
+	<!-- Main Navbar -->
+	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">
+					<img src="assets_new/img/logo-light.png" alt="Website Logo">
+				</a>
+			</div>
+			<!-- Navbar -->
+			<div class="collapse navbar-collapse navbar-main-collapse">
+				<ul class="nav navbar-nav">
+					
+					<li class="active">
+						<a href="#/" class="dropdown-toggle">Home</a>
+					</li>
+				</ul><!-- /.navbar-nav -->
+			</div><!-- /.collapse -->
+		</div><!-- /.container -->
+	</nav><!-- /.navbar -->
+
+	<section class="wrapper-lg bg-info">
+		<div class="container"><!-- 
+			<h1 class="text-center"><i class="fa fa-bullhorn"></i> </h1> -->
+			<hr>
+			<br class="spacer-lg">
+			<div class="row">
+				<div class="col-sm-3">
+				</div><!-- /.col -->
+				<div class="col-sm-6">
+					<h3>Login</h3>
+					<form role="form" ng-submit="signIn(userForm.$valid)" name ="new_registration">
+						<div class="form-group">
+							<label for="username">Username<span class="text-danger"> *</span></label>
+							<input type="text" class="form-control input-lg" id="user_name" placeholder="User Name" name="user_name"  ng-model="signin.user_name" 
+							   ng-minlength="1" ng-maxlength="40" required>
+						</div>
+						<div class="form-group">
+							<label for="login_password">Password</label>
+                            <input type="password" class="form-control input-lg" id="password" name="password" ng-model="signin.password" placeholder="Password" required>
+						</div>
+						<button type="submit" class="btn btn-lg btn-danger">Login</button>
+					</form>
+					<br class="spacer-md">
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</section>
+
+	
